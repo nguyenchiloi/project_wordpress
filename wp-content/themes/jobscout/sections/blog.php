@@ -16,63 +16,68 @@ $ed_blog      = get_theme_mod( 'ed_blog', true );
 $args = array(
     'post_type'           => 'post',
     'post_status'         => 'publish',
-    'posts_per_page'      => 3,
+    'posts_per_page'      => 4,
     'ignore_sticky_posts' => true
 );
 
 $qry = new WP_Query( $args );
 
 if( $ed_blog && ( $blog_heading || $sub_title || $qry->have_posts() ) ){ ?>
-<section id="blog-section" class="article-section">
-	<div class="container">
-        <?php 
-            if( $blog_heading ) echo '<h2 class="section-title">' . esc_html( $blog_heading ) . '</h2>';
-            if( $sub_title ) echo '<div class="section-desc">' . wpautop( wp_kses_post( $sub_title ) ) . '</div>'; 
+<section id="blog-section">
+    <div class="container">
+        <div class="row">
+            <?php 
+            if( $blog_heading ) echo '<h2 class="section-title" style = "padding-bottom: 70px">' . esc_html( 'NEWEST BLOG ENTRIES' ) . '</h2>';
         ?>
-        
-        <?php if( $qry->have_posts() ){ ?>
-           <div class="article-wrap">
-    			<?php 
+            <div class="col-md-12 module3">
+                <div class="postlist">
+                    <div class="post_listing">
+                    <?php if( $qry->have_posts() ){ ?>
+                <div class="article-wrap" id="pmd3">
+                    <?php 
                 while( $qry->have_posts() ){
                     $qry->the_post(); ?>
-                    <article class="post">
-        				<figure class="post-thumbnail">
+                    <article class="post" id = "md3">
+                        <figure class="post-thumbnail" id = "thumbnailmd3">
                             <a href="<?php the_permalink(); ?>" class="post-thumbnail">
                             <?php 
-                                if( has_post_thumbnail() ){
-                                    the_post_thumbnail( 'jobscout-blog', array( 'itemprop' => 'image' ) );
-                                }else{ 
-                                    jobscout_fallback_svg_image( 'jobscout-blog' ); 
-                                }                            
-                            ?>                        
+                            if( has_post_thumbnail() ){
+                                the_post_thumbnail( 'jobscout-blog', array( 'itemprop' => 'image' ) );
+                            }else{ 
+                                jobscout_fallback_svg_image( 'jobscout-blog' ); 
+                            }       
+                            ?>
                             </a>
                         </figure>
-                        <header class="entry-header">
-                            <div class="entry-meta">
+                        <header class="entry-header" id = "entryhdmd3">
+                            <h3 id = "content">
+                                <a style="color:black" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                                 <?php 
-                                    if( ! $hide_author ) jobscout_posted_by(); 
-                                    if( ! $hide_date ) jobscout_posted_on();
-                                ?> 
-                            </div>
-                            <h3 class="entry-title">
-                                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                   echo"<p style='margin-bottom:15px;margin-top:15px;font-weight: normal'>$sub_title</p>" ;
+                            ?>
+                                <button class="readM">Read More</button>
                             </h3>
                         </header>
-        			</article>			
-        			<?php 
+                    </article>
+                    <?php 
                 }
                 wp_reset_postdata();
                 ?>
-    		</div><!-- .article-wrap -->
-    		
-            <?php if( $blog && $label ){ ?>
+                </div><!-- .article-wrap -->
+
+                <?php if( $blog && $label ){ ?>
                 <div class="btn-wrap">
-        			<a href="<?php the_permalink( $blog ); ?>" class="btn"><?php echo esc_html( $label ); ?></a>
-        		</div>
-            <?php } ?>
-        
-        <?php } ?>
-	</div>
+                    <a href="<?php the_permalink( $blog ); ?>" class="btn"><?php echo esc_html( $label ); ?></a>
+                </div>
+                <?php } ?>
+
+                <?php } ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </section>
 <?php 
 }
