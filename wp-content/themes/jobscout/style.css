@@ -2617,9 +2617,9 @@ section.top-job-section .section-title {
   margin-top: 5px;
 }
 
-.top-job-section .row div.job_listings article .company-name::before {
+/* .top-job-section .row div.job_listings article .company-name::before {
   content: "@";
-}
+} */
 
 .top-job-section .row div.job_listings article .entry-meta {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
@@ -8201,4 +8201,17 @@ RESPONSIVE STYLESHEET
 }
 .chinhlai-search{
   margin-top: 30px !important;
+}
+/* ----------------------------- */
+.home .jobs-style{
+  border: none !important;
+}
+
+.home .title-job{
+  text-transform: uppercase !important;
+  text-decoration: none;
+}
+.home .location-job a{
+  color: gray !important;
+  text-decoration: none !important;
 }
