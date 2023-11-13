@@ -619,6 +619,7 @@ img {
   height: auto;
   /* Make sure images are scaled correctly. */
   max-width: 100%;
+  height: 343px;
   /* Adhere to container width. */
   vertical-align: top;
 }
@@ -8175,20 +8176,11 @@ RESPONSIVE STYLESHEET
     flex: 1;
     flex-wrap: wrap;
 }
-/* #pmd3{
-  width: 48%;
-    background: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    margin-right: 2.5%;
-    margin-bottom: 3%;
-    border-radius: 5px;
-    padding: 30px;
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    overflow: hidden;
-} */
+#pmdd3{
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+}
 .readM{
   text-decoration: none;
   background:none;
@@ -8198,7 +8190,7 @@ RESPONSIVE STYLESHEET
   font-size: 15px;
 }
 #md3{
-  width: 48%;
+    width: 50%;
     background: #fff;
     border: 1px solid rgba(0, 0, 0, 0.1);
     margin-right: 2.5%;
