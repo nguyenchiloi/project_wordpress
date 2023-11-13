@@ -8170,7 +8170,7 @@ RESPONSIVE STYLESHEET
   justify-content: space-evenly;
   display: flex;
 } 
-.post_listing{
+.bog-section .row .postlist .post_listing{
   display: flex;
     flex: 1;
     flex-wrap: wrap;
@@ -8198,7 +8198,6 @@ RESPONSIVE STYLESHEET
   font-size: 15px;
 }
 #md3{
-  width: 100%;
     background: #fff;
     border: 1px solid rgba(0, 0, 0, 0.1);
     margin-right: 2.5%;
@@ -8216,4 +8215,13 @@ RESPONSIVE STYLESHEET
 }
 #content{
   text-align: left;
+}
+.cdmm3{
+  display: flex;
+}
+.cdm3{
+  display: flex;
+}
+.cdmmmm3{
+  max-width: max-content;
 }

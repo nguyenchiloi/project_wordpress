@@ -25,10 +25,10 @@ $qry = new WP_Query( $args );
 if( $ed_blog && ( $blog_heading || $sub_title || $qry->have_posts() ) ){ ?>
 <section id="blog-section">
     <div class="container">
-        <div class="row">
-            <?php 
+        <?php 
             if( $blog_heading ) echo '<h2 class="section-title" style = "padding-bottom: 70px">' . esc_html( 'NEWEST BLOG ENTRIES' ) . '</h2>';
         ?>
+        <div class="row">
             <div class="col-md-12 module3">
                 <div class="postlist">
                     <div class="post_listing">
@@ -38,7 +38,7 @@ if( $ed_blog && ( $blog_heading || $sub_title || $qry->have_posts() ) ){ ?>
                 while( $qry->have_posts() ){
                     $qry->the_post(); ?>
                     <article class="post" id = "md3">
-                        <figure class="post-thumbnail" id = "thumbnailmd3">
+                        <figure class="post-thumbnail">
                             <a href="<?php the_permalink(); ?>" class="post-thumbnail">
                             <?php 
                             if( has_post_thumbnail() ){
@@ -64,13 +64,6 @@ if( $ed_blog && ( $blog_heading || $sub_title || $qry->have_posts() ) ){ ?>
                 wp_reset_postdata();
                 ?>
                 </div><!-- .article-wrap -->
-
-                <?php if( $blog && $label ){ ?>
-                <div class="btn-wrap">
-                    <a href="<?php the_permalink( $blog ); ?>" class="btn"><?php echo esc_html( $label ); ?></a>
-                </div>
-                <?php } ?>
-
                 <?php } ?>
                     </div>
                 </div>
