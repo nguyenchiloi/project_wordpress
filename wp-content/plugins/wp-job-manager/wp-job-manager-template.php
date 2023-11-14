@@ -1235,7 +1235,7 @@ function wpjm_add_post_class( $classes, $class, $post_id ) {
 		$job_types = wpjm_get_the_job_types( $post );
 		if ( ! empty( $job_types ) ) {
 			foreach ( $job_types as $job_type ) {
-				$classes[] = 'job-type-' . sanitize_title( $job_type->name );
+				$classes[] = 'job-type-' . sanitize_title( $job_type->name ). 'aaa';
 			}
 		}
 	}

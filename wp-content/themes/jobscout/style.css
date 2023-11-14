@@ -2617,9 +2617,9 @@ section.top-job-section .section-title {
   margin-top: 5px;
 }
 
-.top-job-section .row div.job_listings article .company-name::before {
+/* .top-job-section .row div.job_listings article .company-name::before {
   content: "@";
-}
+} */
 
 .top-job-section .row div.job_listings article .entry-meta {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
@@ -2666,17 +2666,17 @@ section.top-job-section .section-title {
 .job-types li.job-type,
 .job_listing li.job-type {
   list-style: none;
-  font-size: 0.7778em;
+  font-size: 8px;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 700;
   display: inline-block;
-  border: 1px solid #2ace5e;
-  border-radius: 40px;
-  padding: 5px 20px;
-  color: #2ace5e;
+  border: 1px solid gray;
+  padding: 5px 10px;
+  color: gray;
   margin-top: 10px;
   cursor: default;
+  background: #f2f2f2;
 }
 
 .job-manager li.freelance,
@@ -4929,6 +4929,7 @@ WIDGET RECENT POST & POPULAR POST
 .widget_raratheme_popular_post ul li .post-thumbnail,
 .widget_raratheme_recent_post ul li .post-thumbnail {
   width: 75px;
+  height: 75px;
   border-radius: 5px;
   overflow: hidden;
 }
@@ -5583,6 +5584,7 @@ JOB LISTING PAGE
   margin-bottom: 0;
   font-size: 1.1112em;
   line-height: 1.45em;
+  height: 45px;
 }
 
 .site-main .entry-content div.job_listings div.job_listings article .company-name {
@@ -8158,4 +8160,59 @@ RESPONSIVE STYLESHEET
 
 .wp-block-social-links {
   flex-wrap: wrap !important;
+}
+/*style cua Loi nha*/
+.location-search a{
+  text-decoration: none;
+  color: gray;
+}
+.chinhcss1{
+  font-size: 0.406rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: 1px solid #f2f2f2;
+  border-radius: 5px;
+  padding: 5px;
+  color: gray;
+  margin-top: 10px;
+  cursor: default;
+  background: #f2f2f2;
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+.ngaythangnam-search{
+  margin: 0 !important;
+  color: gray;
+}
+.chinhcss1 a{
+  text-decoration: none !important;
+  color: gray;
+}
+.noidungngan-search{
+  margin-left: 0 !important;
+  margin-top: 10px;
+  text-align: justify;
+}
+.noidung-khung-search{
+  width: 33.3%;
+}
+.chinhlai1 a{
+  text-decoration: none;
+}
+.chinhlai-search{
+  margin-top: 30px !important;
+}
+/* ----------------------------- */
+.home .jobs-style{
+  border: none !important;
+}
+
+.home .title-job{
+  text-transform: uppercase !important;
+  text-decoration: none;
+}
+.home .location-job a{
+  color: gray !important;
+  text-decoration: none !important;
 }
