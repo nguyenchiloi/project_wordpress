@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Template part for displaying posts
  *
@@ -7,21 +8,15 @@
  * @package JobScout
  */
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> itemscope itemtype="https://schema.org/Blog">
-	<?php 
-        /**
-         * @hooked jobscout_post_thumbnail - 10
-        */
-        do_action( 'jobscout_before_post_entry_content' );
-
-        echo '<div class="content-wrap">';
-        /**
-         * @hooked jobscout_entry_header  - 10 
-         * @hooked jobscout_entry_content - 15
-         * @hooked jobscout_entry_footer  - 20
-        */
-        do_action( 'jobscout_post_entry_content' );
-        
-        echo '</div>';
-    ?>
-</article><!-- #post-<?php the_ID(); ?> -->
+<div class="col-md-6">
+    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> itemscope itemtype="https://schema.org/Blog">
+        <div class="row">
+            <div class="col-md-6">
+                <?php echo get_the_post_thumbnail(); ?>
+            </div>
+            <div class="col-md-6">
+                <?php echo the_title(); ?>
+            </div>
+        </div>
+    </article><!-- #post-<?php the_ID(); ?> -->
+</div>
