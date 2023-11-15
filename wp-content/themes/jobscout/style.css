@@ -2726,7 +2726,7 @@ section.top-job-section .section-title {
   background: none;
 }
 
-.top-job-section div.job_listings .load_more_jobs::before {
+/* .top-job-section div.job_listings .load_more_jobs::before {
   content: "";
   background-image: url('data:image/svg+xml; utf-8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="%23fff" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>');
   background-repeat: no-repeat;
@@ -2735,12 +2735,12 @@ section.top-job-section .section-title {
   position: absolute;
   top: 17px;
   left: 20px;
-}
+} */
 
-.top-job-section div.job_listings .load_more_jobs:hover::before {
+/* .top-job-section div.job_listings .load_more_jobs:hover::before {
   content: "";
   background-image: url('data:image/svg+xml; utf-8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="%232ace5e" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>');
-}
+} */
 
 .top-job-section div.job_listings .load_more_jobs strong {
   font-weight: 700;
@@ -8205,6 +8205,7 @@ RESPONSIVE STYLESHEET
 /* ----------------------------- */
 .home .jobs-style{
   border: none !important;
+  border-radius: 3px !important;
 }
 
 .home .title-job{
@@ -8214,4 +8215,20 @@ RESPONSIVE STYLESHEET
 .home .location-job a{
   color: gray !important;
   text-decoration: none !important;
+}
+.load-more{
+  color: orange !important;
+  background: white !important;
+  border: 1px solid orange !important;
+}
+.load-more:hover{
+  color: white !important;
+  background-color: orange !important;
+}
+.load-more{
+  padding: 12px 45px 12px 45px !important;
+}
+
+.chinhlai-search article{
+  width: 100% !important;
 }

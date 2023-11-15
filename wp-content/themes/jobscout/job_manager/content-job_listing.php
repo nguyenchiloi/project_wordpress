@@ -52,11 +52,11 @@ $format_date = date("M d, Y", strtotime($date_arr[0]));
 
 				<div class="job-title-wrap">
 
-					<h2 class="entry-title">
-						<a class="title-job" href="<?php the_job_permalink(); ?>">
-							<?php echo ucfirst(wpjm_the_job_title()); ?>
-						</a>
-					</h2>
+				<h2 class="entry-title">
+					<a class="title-job" href="<?php the_job_permalink(); ?>">
+						<?php echo wpjm_the_job_title() ?>
+					</a>
+				</h2>
 
 					<?php if ($company_name) { ?>
 						<div class="company-name">
