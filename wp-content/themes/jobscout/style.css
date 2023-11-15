@@ -8158,7 +8158,7 @@ RESPONSIVE STYLESHEET
 .wp-block-social-links {
   flex-wrap: wrap !important;
 }
-<<<<<<< HEAD
+/*style cua duy*/
 #blog-section{
   background-color: #f5f5f7;
   text-align: center;
@@ -8210,7 +8210,7 @@ RESPONSIVE STYLESHEET
 }
 .ptnb{
   margin:initial;
-=======
+}
 /*style cua Loi nha*/
 .location-search a{
   text-decoration: none;
@@ -8291,5 +8291,4 @@ RESPONSIVE STYLESHEET
 
 .chinhlai-search article{
   width: 100% !important;
->>>>>>> ae10c56a5c6d5abd176dc03e2f37ed4c4bd9e828
 }
