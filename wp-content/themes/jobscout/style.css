@@ -8284,3 +8284,22 @@ RESPONSIVE STYLESHEET
 .chinhlai-search article{
   width: 100% !important;
 }
+/* css cua phuc */
+.module-5 {
+  height: 370px;
+  
+}
+
+.img-blog {
+  padding: 10px;
+  height: 300px !important;
+}
+
+.data-blog {
+  padding: 10px;
+}
+
+.title-blog {
+  font-size: 1em;
+}
+/* ----------- */
