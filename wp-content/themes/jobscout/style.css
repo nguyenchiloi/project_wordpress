@@ -4685,7 +4685,6 @@ WIDGET CALL TO ACTION
 .widget_raratheme_companion_cta_widget .widget-title {
   font-size: 1.7223em;
   color: #fff;
-  font-weight: 800;
   margin-top: 0;
   margin-bottom: 0;
   line-height: 1.5;
@@ -4708,14 +4707,13 @@ WIDGET CALL TO ACTION
 
 .widget_raratheme_companion_cta_widget a.btn-cta {
   display: inline-block;
-  background: #2ace5e;
-  border: 1px solid #2ace5e;
+  background: transparent;
+  border: 1px solid white;
   color: #fff;
-  font-weight: 700;
   margin: 5px;
   font-size: 0.888em;
-  border-radius: 5px;
   padding: 10px 18px;
+  text-decoration: none;
 }
 
 .widget_raratheme_companion_cta_widget a.btn-cta:hover {
@@ -8201,6 +8199,15 @@ RESPONSIVE STYLESHEET
 }
 .chinhlai-search{
   margin-top: 30px !important;
+}
+.text-holder-homend{
+  margin: 20px 0;
+}
+.text-holder-homend1{
+  margin-bottom: 20px;
+}
+.back-ground-photo{
+  background-image: url(./images/banner-image.jpg);
 }
 /* ----------------------------- */
 .home .jobs-style{
