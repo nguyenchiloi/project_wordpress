@@ -619,8 +619,7 @@ img {
   height: auto;
   /* Make sure images are scaled correctly. */
   max-width: 100%;
-  height: 343px;
-  /* Adhere to container width. */
+    /* Adhere to container width. */
   vertical-align: top;
 }
 
@@ -8176,11 +8175,6 @@ RESPONSIVE STYLESHEET
     flex: 1;
     flex-wrap: wrap;
 }
-#pmdd3{
-  display: flex;
-  flex: 1;
-  flex-wrap: wrap;
-}
 .readM{
   text-decoration: none;
   background:none;
@@ -8190,12 +8184,9 @@ RESPONSIVE STYLESHEET
   font-size: 15px;
 }
 #md3{
-    width: 50%;
     background: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.1);
     margin-right: 2.5%;
     margin-bottom: 3%;
-    border-radius: 5px;
     padding: 30px;
     position: relative;
     display: flex;
@@ -8205,16 +8196,18 @@ RESPONSIVE STYLESHEET
 }
 #entryhdmd3{
     padding-left: 20px;
+    font-size: 40px;
 }
 #content{
   text-align: left;
 }
-.cdmm3{
-  display: flex;
+.md33{
+  display: flex !important;
+  flex: 2;
+  flex-grow: 2;
+  flex-wrap: wrap;
+  width:1170px
 }
-.cdm3{
-  display: flex;
-}
-.cdmmmm3{
-  max-width: max-content;
+.ptnb{
+  margin:initial;
 }
