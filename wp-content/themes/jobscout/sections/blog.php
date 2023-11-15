@@ -29,7 +29,7 @@ if ($ed_blog && ($blog_heading || $sub_title || $qry->have_posts())) { ?>
     <section id="blog-section">
         <div class="container">
             <?php
-            if ($blog_heading) echo '<h2 class="section-title" style = "padding-bottom: 70px; font-weight:inherit !important">' . esc_html('NEWEST BLOG ENTRIES') . '</h2>';
+            if ($blog_heading) echo '<h2 class="section-title" style = "padding-bottom: 70px; font-weight:inherit !important; text-align:center">' . esc_html('NEWEST BLOG ENTRIES') . '</h2>';
             ?>
             <div class="row">
 
