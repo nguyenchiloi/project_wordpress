@@ -53,7 +53,7 @@ $company_name = get_post_meta(get_the_ID(), '_company_name', true);
 
 				<h2 class="entry-title">
 					<a class="title-job" href="<?php the_job_permalink(); ?>">
-						<?php echo ucfirst(wpjm_the_job_title()); ?>
+						<?php echo wpjm_the_job_title() ?>
 					</a>
 				</h2>
 
