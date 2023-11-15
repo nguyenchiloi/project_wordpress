@@ -87,10 +87,10 @@ function jobscout_setup() {
      * Add support for custom header.
     */
     add_theme_support( 'custom-header', apply_filters( 'jobscout_custom_header_args', array(
-		'default-image' => get_template_directory_uri().'/images/banner-image.jpg',
+		'default-image' => get_template_directory_uri().'/images/banner-img3.jpg',
         'video'         => true,
 		'width'         => 1920,
-		'height'        => 704, 
+		'height'        => 709, 
 		'header-text'   => false
 	) ) );
 
