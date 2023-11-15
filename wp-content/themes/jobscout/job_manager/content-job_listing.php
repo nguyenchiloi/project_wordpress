@@ -22,68 +22,71 @@ $job_featured = get_post_meta(get_the_ID(), '_featured', true);
 $company_name = get_post_meta(get_the_ID(), '_company_name', true);
 
 ?>
-		<?php
-		$post = get_post();
-		$date = $post->post_date;
-		$day = date("j", strtotime($date));
-		$month = date("F", strtotime($date));
-		$year = date("Y", strtotime($date));
+<?php
+$post = get_post();
+$date = $post->post_date;
+$day = date("j", strtotime($date));
+$month = date("F", strtotime($date));
+$year = date("Y", strtotime($date));
 
 
-		$post_date = get_the_date('d', $post->ID);
-		$post_month = get_the_date('F', $post->ID);
-		$post_year = get_the_date('Y', $post->ID);
-		//get all category
-		$post_id = get_the_ID();
-		$categories = get_the_category($post_id);
-		$date_arr = explode(' ', $date);
-		$format_date = date("M d, Y", strtotime($date_arr[0]));
-		?>
+$post_date = get_the_date('d', $post->ID);
+$post_month = get_the_date('F', $post->ID);
+$post_year = get_the_date('Y', $post->ID);
+//get all category
+$post_id = get_the_ID();
+$categories = get_the_category($post_id);
+$date_arr = explode(' ', $date);
+$format_date = date("M d, Y", strtotime($date_arr[0]));
+?>
 <?php if (is_front_page() || is_home()) { ?>
 	<div class="col-md-6">
 		<div class="home">
-		<article style="width:100% !important" <?php job_listing_class(); ?> data-longitude="<?php echo esc_attr($post->geolocation_lat); ?>"
-			data-latitude="<?php echo esc_attr($post->geolocation_long); ?>">
+			<article style="width:100% !important" <?php job_listing_class(); ?>
+				data-longitude="<?php echo esc_attr($post->geolocation_lat); ?>"
+				data-latitude="<?php echo esc_attr($post->geolocation_long); ?>">
 
-			<figure class="company-logo">
-				<?php the_company_logo('thumbnail'); ?>
-			</figure>
+				<figure class="company-logo">
+					<?php the_company_logo('thumbnail'); ?>
+				</figure>
 
-			<div class="job-title-wrap">
+				<div class="job-title-wrap">
 
-				<h2 class="entry-title">
-					<a class="title-job" href="<?php the_job_permalink(); ?>">
-						<?php echo ucfirst(wpjm_the_job_title()); ?>
-					</a>
-				</h2>
+					<h2 class="entry-title">
+						<a class="title-job" href="<?php the_job_permalink(); ?>">
+							<?php echo ucfirst(wpjm_the_job_title()); ?>
+						</a>
+					</h2>
 
-				<?php if ($company_name) { ?>
-					<div class="company-name">
-						<?php echo "Created: " . $format_date //the_company_name(); ?>
-					</div>
-				<?php } ?>
-				<?php
+					<?php if ($company_name) { ?>
+						<div class="company-name">
+							<?php echo "Created: " . $format_date //the_company_name(); ?>
+						</div>
+					<?php } ?>
+					<?php
 					if (get_option('job_manager_enable_types')) {
 						$types = wpjm_get_the_job_types();
 						if (!empty($types)):
 							foreach ($types as $jobtype): ?>
 								<li class="jobs-style job-type <?php echo esc_attr(sanitize_title($jobtype->slug)); ?>">
 									<?php echo esc_html($jobtype->name) . " |" ?>
-									<?php the_company_name()  ?> |
-									<span class="location-job"><?php the_job_location(true); ?></span>
-									
+									<?php the_company_name() ?> |
+									<span class="location-job">
+										<?php the_job_location(true); ?>
+									</span>
+
 								</li>
 							<?php endforeach; endif;
 					}
 					do_action('job_listing_meta_end');
 					?>
-			</div>
-
-			<?php if ($job_featured) { ?>
-				<div class="featured-label">
-					<?php esc_html_e('Featured', 'jobscout'); ?>
 				</div>
-			<?php } ?>
+
+				<?php if ($job_featured) { ?>
+					<div class="featured-label">
+						<?php esc_html_e('Featured', 'jobscout'); ?>
+					</div>
+				<?php } ?>
 				<ul class="noidungngan-search">
 					<li>
 						<?php echo get_the_excerpt() ?>
@@ -95,75 +98,75 @@ $company_name = get_post_meta(get_the_ID(), '_company_name', true);
 						<?php echo get_the_job_salary() ?>
 					</li>
 				</ul>
-		</article>
-		
+			</article>
+
 		</div>
-		
+
 	</div>
 
-<?php }else{ ?>
+<?php } else { ?>
 	<div class="col-md-6">
-	<article <?php job_listing_class(); ?> data-longitude="<?php echo esc_attr($post->geolocation_lat); ?>"
-		data-latitude="<?php echo esc_attr($post->geolocation_long); ?>">
-		<?php
-		$post = get_post();
-		$date = $post->post_date;
-		$day = date("j", strtotime($date));
-		$month = date("F", strtotime($date));
-		$year = date("Y", strtotime($date));
+		<article <?php job_listing_class(); ?> data-longitude="<?php echo esc_attr($post->geolocation_lat); ?>"
+			data-latitude="<?php echo esc_attr($post->geolocation_long); ?>">
+			<?php
+			$post = get_post();
+			$date = $post->post_date;
+			$day = date("j", strtotime($date));
+			$month = date("F", strtotime($date));
+			$year = date("Y", strtotime($date));
 
 
-		$post_date = get_the_date('d', $post->ID);
-		$post_month = get_the_date('F', $post->ID);
-		$post_year = get_the_date('Y', $post->ID);
-		//get all category
-		$post_id = get_the_ID();
-		$categories = get_the_category($post_id);
-		?>
-		<figure class="company-logo">
-			<?php the_company_logo('thumbnail'); ?>
-		</figure>
+			$post_date = get_the_date('d', $post->ID);
+			$post_month = get_the_date('F', $post->ID);
+			$post_year = get_the_date('Y', $post->ID);
+			//get all category
+			$post_id = get_the_ID();
+			$categories = get_the_category($post_id);
+			?>
+			<figure class="company-logo">
+				<?php the_company_logo('thumbnail'); ?>
+			</figure>
 
-		<div class="job-title-wrap">
+			<div class="job-title-wrap">
 
-			<h2 class="entry-title chinhlai1">
-				<a href="<?php the_job_permalink(); ?>">
-					<?php wpjm_the_job_title(); ?>
-				</a>
-			</h2>
-			<p class="ngaythangnam-search"> Created:
-				<?php echo $post_month . ' ' . $post_date . ', ' . $post_year ?>
-			</p>
-			<div class="tongkhung1">
-				<?php
-				if (get_option('job_manager_enable_types')) {
-					$types = wpjm_get_the_job_types();
-					if (!empty($types)):
-						foreach ($types as $jobtype): ?>
-							<div class="chinhcss1">
-								<div class="noidung-khung-search">
-									<?php echo esc_html($jobtype->name); ?>
+				<h2 class="entry-title chinhlai1">
+					<a href="<?php the_job_permalink(); ?>">
+						<?php wpjm_the_job_title(); ?>
+					</a>
+				</h2>
+				<p class="ngaythangnam-search"> Created:
+					<?php echo $post_month . ' ' . $post_date . ', ' . $post_year ?>
+				</p>
+				<div class="tongkhung1">
+					<?php
+					if (get_option('job_manager_enable_types')) {
+						$types = wpjm_get_the_job_types();
+						if (!empty($types)):
+							foreach ($types as $jobtype): ?>
+								<div class="chinhcss1">
+									<div class="noidung-khung-search">
+										<?php echo esc_html($jobtype->name); ?>
+									</div>
+									<span class="keduong2ben">|</span>
+									<div class="noidung-khung-search">
+										<?php the_company_name(); ?>
+									</div>
+									<span class="keduong2ben">|</span>
+									<div class="noidung-khung-search">
+										<?php the_job_location(true); ?>
+									</div>
 								</div>
-								<span class="keduong2ben">|</span>
-								<div class="noidung-khung-search">
-									<?php the_company_name(); ?>
-								</div>
-								<span class="keduong2ben">|</span>
-								<div class="noidung-khung-search">
-									<?php the_job_location(true); ?>
-								</div>
-							</div>
 
-						<?php endforeach; endif;
-				}
-				do_action('job_listing_meta_end');
-				?>
+							<?php endforeach; endif;
+					}
+					do_action('job_listing_meta_end');
+					?>
 
-			</div>
+				</div>
 
 
 
-			<!-- <div class="entry-meta">
+				<!-- <div class="entry-meta">
 				<?php
 				do_action('job_listing_meta_start');
 
@@ -179,18 +182,25 @@ $company_name = get_post_meta(get_the_ID(), '_company_name', true);
 					<?php the_job_location(true); ?>
 				</div>
 			</div> -->
-		</div>
-		<ul class="noidungngan-search">
-			<li>
-				<?php echo get_the_excerpt() ?>
-			</li>
-		</ul>
-		<?php if ($job_featured) { ?>
-			<div class="featured-label">
-				<?php esc_html_e('Featured', 'jobscout'); ?>
 			</div>
-		<?php } ?>
+			<ul class="noidungngan-search">
+				<li>
+					<?php echo get_the_excerpt() ?>
+				</li>
+				<li>
+					<?php echo get_the_company_tagline() ?>
+				</li>
+				<li>
+					<?php echo get_the_job_salary() ?>
+				</li>
 
-	</article>
-</div>
-	<?php } ?>
+			</ul>
+			<?php if ($job_featured) { ?>
+				<div class="featured-label">
+					<?php esc_html_e('Featured', 'jobscout'); ?>
+				</div>
+			<?php } ?>
+
+		</article>
+	</div>
+<?php } ?>
