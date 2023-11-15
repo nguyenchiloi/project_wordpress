@@ -731,7 +731,8 @@ class WP_Job_Manager_Shortcodes {
 				$data_attributes['job_types'] = implode( ',', $atts['job_types'] );
 			}
 
-			if ( $jobs->have_posts() ) {
+			if(is_front_page() || is_home()){
+				if ( $jobs->have_posts() ) {
 				get_job_manager_template( 'job-listings-start.php' );
 				while ( $jobs->have_posts() ) {
 					$jobs->the_post();
@@ -744,11 +745,32 @@ class WP_Job_Manager_Shortcodes {
 						// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Template output.
 						echo get_job_listing_pagination( $jobs->max_num_pages );
 					} else {
-						echo '<a class="load_more_jobs" href="#"><strong>' . esc_html__( 'Load more listings', 'wp-job-manager' ) . '</strong></a>';
+						echo '<a class="load_more_jobs load-more" href="#"><strong>' . esc_html__( 'Views more jobs', 'wp-job-manager' ) . '</strong></a>';
 					}
 				}
 			} else {
 				do_action( 'job_manager_output_jobs_no_results' );
+			}
+			}else{
+				if ( $jobs->have_posts() ) {
+					get_job_manager_template( 'job-listings-start.php' );
+					while ( $jobs->have_posts() ) {
+						$jobs->the_post();
+						get_job_manager_template_part( 'content', 'job_listing' );
+					}
+					get_job_manager_template( 'job-listings-end.php' );
+					if ( $jobs->found_posts > $atts['per_page'] && $atts['show_more'] ) {
+						wp_enqueue_script( 'wp-job-manager-ajax-filters' );
+						if ( $atts['show_pagination'] ) {
+							// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Template output.
+							echo get_job_listing_pagination( $jobs->max_num_pages );
+						} else {
+							echo '<a class="load_more_jobs" href="#"><strong>' . esc_html__( 'Load more listings', 'wp-job-manager' ) . '</strong></a>';
+						}
+					}
+				} else {
+					do_action( 'job_manager_output_jobs_no_results' );
+				}
 			}
 			wp_reset_postdata();
 		}
