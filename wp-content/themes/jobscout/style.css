@@ -8292,3 +8292,59 @@ RESPONSIVE STYLESHEET
 .chinhlai-search article{
   width: 100% !important;
 }
+.main {
+  padding: 0 !important;
+}
+
+.main .header {
+  background-image: url(https://s3.ap-southeast-1.amazonaws.com/we-xpats.com/articles/images/AdobeStock_183188295.jpeg);
+  padding: 0 435px;
+  background-size: cover;
+}
+@media only screen and (max-width: 600px){
+  .main .header {
+    background-image: url(https://s3.ap-southeast-1.amazonaws.com/we-xpats.com/articles/images/AdobeStock_183188295.jpeg);
+    padding: 0 !important;
+    background-size: cover;
+  }
+  .image-japan {
+    width: 80%;
+    height: 100%;
+    text-align: center !important;
+    margin-left: 0 !important;
+  }
+  .paragarh {
+    padding: 0 !important;
+  }
+  .content{
+    text-align: center !important;
+  }
+}
+
+.image-japan {
+  width: 80%;
+  height: 100%;
+  margin-left: 100px;
+}
+
+.content,
+.content-location {
+  font-weight: 600;
+}
+
+.content p {
+  color: rgb(114, 90, 53);
+}
+
+.content-head {
+  background-color: #f5f5f7;
+  padding-bottom: 50px;
+}
+
+.location .content {
+  text-align: center !important;
+}
+
+.paragarh {
+  padding: 0 150px;
+}
