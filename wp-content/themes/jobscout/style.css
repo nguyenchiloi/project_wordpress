@@ -2404,6 +2404,7 @@ SITE BANNER SECTION
   font-weight: 400;
   padding: 10px 20px;
   color: #666;
+  border-left: 1px solid white;
 }
 
 .banner-caption .jobscout_job_filters .search_jobs input::placeholder {

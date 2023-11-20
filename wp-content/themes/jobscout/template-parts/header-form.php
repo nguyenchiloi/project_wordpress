@@ -46,7 +46,7 @@ if ($post_slug) {
     background: white;
     padding-left: 10px;
     font-size: 24px;
-    color: orange; padding-right:5px">></i>
+    color: orange; padding-right:5px; "></i>
         <!-- <input type="text"  id="search_location" name="search_location" placeholder="<?php //esc_attr_e( 'Location', 'jobscout' ); ?>"> -->
           <?php
           global $wpdb;
@@ -55,8 +55,8 @@ if ($post_slug) {
           $data = $wpdb->get_results($wpdb->prepare($sql));
           ?>
 
-          <select id="search_location" name="search_location" value="Khu vực">
-            <option value="">Khu vực</option>
+          <select id="search_location" name="search_location" value="Tokyo">
+            <option value="">Tokyo</option>
             <?php foreach ($data as $value): ?>
               <option value="<?php echo $value->location; ?>">
                 <?php echo $value->location; ?>
