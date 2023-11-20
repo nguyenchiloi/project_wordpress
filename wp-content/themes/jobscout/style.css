@@ -663,14 +663,12 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   display: inline-block;
-  background: #2ace5e;
-  border: 1px solid #2ace5e;
+  background: #ea751e;
+  border: 1px solid #ea751e;
   color: #fff;
   font-weight: 700;
 
   font-size: 0.888em;
-  border-radius: 5px;
-  padding: 10px 18px;
   cursor: pointer;
   -webkit-transition: all ease 0.35s;
   -moz-transition: all ease 0.35s;
@@ -682,7 +680,7 @@ input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
   background: none;
-  color: #2ace5e;
+  color: #ea751e !important;
 }
 
 button:focus,
@@ -710,7 +708,7 @@ input[type="datetime-local"],
 input[type="color"],
 textarea {
   color: #000;
-  border: 1px solid #e6e6e6;
+  border: 0 solid #e6e6e6;
   border-radius: 5px;
   padding: 5px 15px;
   width: 100%;
@@ -2308,7 +2306,7 @@ SITE BANNER SECTION
   top: 50%;
   left: 0;
   right: 0;
-  text-align: center;
+  /* text-align: center; */
   z-index: 9;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
@@ -2316,7 +2314,6 @@ SITE BANNER SECTION
 }
 
 .banner-caption .caption-inner {
-  max-width: 770px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -2356,10 +2353,10 @@ SITE BANNER SECTION
 
 .banner-caption .jobscout_job_filters .search_jobs {
   padding: 0;
-  display: flex;
+  /* display: flex; */
   flex: 1;
-  flex-wrap: wrap;
-  border-radius: 5px;
+  /* flex-wrap: wrap; */
+  /* border-radius: 5px; */
   overflow: hidden;
 }
 
@@ -2368,13 +2365,16 @@ SITE BANNER SECTION
 .banner-caption .jobscout_job_filters .search_jobs div.filter_last,
 .banner-caption .jobscout_job_filters .search_jobs div.search_location {
   float: none;
-  width: auto;
+  /* width: auto; */
   padding-right: 0;
-  display: flex;
-  flex: 1;
+  /* display: flex; */
+  /* flex: 1; */
   padding-left: 0;
 }
-
+.search_location{
+  margin-left: 20px;
+  width: 20%;
+}
 .banner-caption .jobscout_job_filters .search_jobs div.filter_wide,
 .banner-caption .jobscout_job_filters .search_jobs div.search_categories {
   width: auto;
@@ -2387,6 +2387,7 @@ SITE BANNER SECTION
 .banner-caption .jobscout_job_filters .search_submit {
   display: flex;
   flex: 0;
+  margin-left: 20px;
 }
 
 .banner-caption .form-wrap form .search_jobs label {
@@ -2424,20 +2425,21 @@ SITE BANNER SECTION
 }
 
 .banner-caption .jobscout_job_filters .search_jobs input[type="submit"] {
-  padding: 0;
-  width: 60px;
-  background-image: url('data:image/svg+xml; utf-8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="%23fff" d="M508.5 468.9L387.1 347.5c-2.3-2.3-5.3-3.5-8.5-3.5h-13.2c31.5-36.5 50.6-84 50.6-136C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c52 0 99.5-19.1 136-50.6v13.2c0 3.2 1.3 6.2 3.5 8.5l121.4 121.4c4.7 4.7 12.3 4.7 17 0l22.6-22.6c4.7-4.7 4.7-12.3 0-17zM208 368c-88.4 0-160-71.6-160-160S119.6 48 208 48s160 71.6 160 160-71.6 160-160 160z"></path></svg>');
+  /* background-image: url('data:image/svg+xml; utf-8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="%23fff" d="M508.5 468.9L387.1 347.5c-2.3-2.3-5.3-3.5-8.5-3.5h-13.2c31.5-36.5 50.6-84 50.6-136C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c52 0 99.5-19.1 136-50.6v13.2c0 3.2 1.3 6.2 3.5 8.5l121.4 121.4c4.7 4.7 12.3 4.7 17 0l22.6-22.6c4.7-4.7 4.7-12.3 0-17zM208 368c-88.4 0-160-71.6-160-160S119.6 48 208 48s160 71.6 160 160-71.6 160-160 160z"></path></svg>'); */
   background-repeat: no-repeat;
   background-size: 20px;
   background-position: center;
-  text-indent: 70px;
   overflow: hidden;
   border-left: 1px solid rgba(0, 0, 0, 0.1);
+  color: white;
+  font-weight: bold;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .banner-caption .jobscout_job_filters .search_jobs input[type="submit"]:hover {
   background-color: #fff;
-  background-image: url('data:image/svg+xml; utf-8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="%232ace5e" d="M508.5 468.9L387.1 347.5c-2.3-2.3-5.3-3.5-8.5-3.5h-13.2c31.5-36.5 50.6-84 50.6-136C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c52 0 99.5-19.1 136-50.6v13.2c0 3.2 1.3 6.2 3.5 8.5l121.4 121.4c4.7 4.7 12.3 4.7 17 0l22.6-22.6c4.7-4.7 4.7-12.3 0-17zM208 368c-88.4 0-160-71.6-160-160S119.6 48 208 48s160 71.6 160 160-71.6 160-160 160z"></path></svg>');
+  /* background-image: url('data:image/svg+xml; utf-8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="%232ace5e" d="M508.5 468.9L387.1 347.5c-2.3-2.3-5.3-3.5-8.5-3.5h-13.2c31.5-36.5 50.6-84 50.6-136C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c52 0 99.5-19.1 136-50.6v13.2c0 3.2 1.3 6.2 3.5 8.5l121.4 121.4c4.7 4.7 12.3 4.7 17 0l22.6-22.6c4.7-4.7 4.7-12.3 0-17zM208 368c-88.4 0-160-71.6-160-160S119.6 48 208 48s160 71.6 160 160-71.6 160-160 160z"></path></svg>'); */
 }
 
 /*=========================
@@ -5682,9 +5684,9 @@ div.job_listings .load_more_jobs:focus {
 .jobscout_job_filters .search_jobs div.search_keywords,
 .jobscout_job_filters .search_jobs div.filter_last,
 .jobscout_job_filters .search_jobs div.search_location {
-  float: none;
+  /* float: none;
   width: auto;
-  flex: 1;
+  flex: 1; */
 }
 
 .jobscout_job_filters .search_jobs div.filter_wide,
