@@ -8383,9 +8383,13 @@ RESPONSIVE STYLESHEET
 
 .main .header {
   background-image: url(https://s3.ap-southeast-1.amazonaws.com/we-xpats.com/articles/images/AdobeStock_183188295.jpeg);
-  padding: 0 435px;
+  /* padding: 0 435px; */
+  padding-top: 146px !important;
   background-size: cover;
-}
+  text-align: center;
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
 
 @media only screen and (max-width: 600px) {
   .main .header {
