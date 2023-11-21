@@ -55,7 +55,7 @@ if ($post_slug) {
           $data = $wpdb->get_results($wpdb->prepare($sql));
           ?>
 
-          <select id="search_location" name="search_location" value="Khu vực">
+          <select id="search_location" name="search_location">
             <option value="">Khu vực</option>
             <?php foreach ($data as $value): ?>
               <option value="<?php echo $value->location; ?>">
