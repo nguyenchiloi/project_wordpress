@@ -2170,7 +2170,8 @@ body.home:not(.banner-enabled) .site-header {
 }
 
 .site-branding .site-title a {
-  color: #2ace5e;
+  color: black;
+  text-decoration: none;
 }
 
 .site-branding .site-description {
@@ -8160,10 +8161,7 @@ RESPONSIVE STYLESHEET
 .wp-block-social-links {
   flex-wrap: wrap !important;
 }
-<<<<<<< HEAD
-=======
 /*style cua duy*/
->>>>>>> fa62aae070e5fd3483e36e4ad94a9d8b250e0419
 #blog-section{
   background-color: #f5f5f7;
   text-align: center;
@@ -8292,8 +8290,33 @@ RESPONSIVE STYLESHEET
 }
 .load-more{
   padding: 12px 45px 12px 45px !important;
+  text-decoration: none !important;
+  border-radius: 0 !important;
+  background: #f5f5f7 !important;
 }
-
+.main-navigation ul li a{
+  text-decoration: none !important;
+}
+.main-navigation ul li a:hover{
+  text-decoration: none !important;
+  color: orange !important;
+  border-bottom: 3px solid orange;
+}
+.main-navigation ul li.current-menu-item>a, .main-navigation ul li.current_page_item>a{
+  color: orange !important;
+  border-bottom: 3px solid orange;
+}
+.btn-job{
+  background: orange !important;
+  border: none !important;
+  border-radius: 0 !important;
+}
+.btn-job:hover{
+  background: white !important;
+  border: 1px solid orange !important;
+  border-radius: 0 !important;
+  color: orange !important;
+}
 .chinhlai-search article{
   width: 100% !important;
 }
