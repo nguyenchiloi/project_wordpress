@@ -26,7 +26,7 @@ get_header(); ?>
 	?>
 
 	<main id="main" class="site-main row">
-
+		<p>aaa</p>
 		<?php
 		if (have_posts()) :
 
