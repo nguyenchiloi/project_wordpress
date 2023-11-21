@@ -8161,7 +8161,10 @@ RESPONSIVE STYLESHEET
 .wp-block-social-links {
   flex-wrap: wrap !important;
 }
+<<<<<<< HEAD
+=======
 /*style cua duy*/
+>>>>>>> fa62aae070e5fd3483e36e4ad94a9d8b250e0419
 #blog-section{
   background-color: #f5f5f7;
   text-align: center;
@@ -8295,6 +8298,25 @@ RESPONSIVE STYLESHEET
 .chinhlai-search article{
   width: 100% !important;
 }
+/* css cua phuc */
+.module-5 {
+  height: 370px;
+  
+}
+
+.img-blog {
+  padding: 10px;
+  height: 300px !important;
+}
+
+.data-blog {
+  padding: 10px;
+}
+
+.title-blog {
+  font-size: 1em;
+}
+/* ----------- */
 .main {
   padding: 0 !important;
 }
