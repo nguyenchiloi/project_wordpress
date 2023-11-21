@@ -8321,13 +8321,13 @@ RESPONSIVE STYLESHEET
 }
 /* css cua phuc */
 .module-5 {
-  height: 370px;
-  
+  height: 300px;
+  overflow: hidden;
 }
 
 .img-blog {
-  padding: 10px;
-  height: 300px !important;
+  padding: 15px;
+  height: 200px !important;
 }
 
 .data-blog {

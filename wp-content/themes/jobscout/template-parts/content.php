@@ -12,7 +12,7 @@ $sub_title    = get_theme_mod('blog_section_subtitle', __('We will help you find
 <div class="col-md-6">
     <article class="" id="post-<?php the_ID(); ?>" <?php post_class(); ?> itemscope itemtype="https://schema.org/Blog">
         <div class="row">
-        <div class="col-md-6">
+            <div class="col-md-6">
                 <div class="item img-blog">
                     <?php echo get_the_post_thumbnail(); ?>
                 </div>

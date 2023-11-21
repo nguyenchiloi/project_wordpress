@@ -24,9 +24,8 @@ get_header(); ?>
 	 */
 	do_action('jobscout_before_posts_content');
 	?>
-
+	<h1 class="text-center">NEWEST BLOG ENTRIES</h1>
 	<main id="main" class="site-main row">
-		<p>aaa</p>
 		<?php
 		if (have_posts()) :
 
