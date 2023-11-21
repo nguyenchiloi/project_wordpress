@@ -26,7 +26,8 @@ get_header(); ?>
 	?>
 
 	<main id="main" class="site-main row">
-		<p>aaa</p>
+
+		<h2 style="text-align: center; margin: 50px 0">NEWEST BLOG ENTRIES</h2>
 		<?php
 		if (have_posts()) :
 

@@ -163,7 +163,7 @@ if (!function_exists('jobscout_content_start')):
         $home_sections = jobscout_get_home_sections();
         if (!(is_front_page() && !is_home() && $home_sections)) { //Make necessary adjust for pg template.
             echo is_404() ? '<div class="error-holder">' : '<div id="content" class="site-content" style="margin-top:0 !important;">';
-
+            
             if (is_archive() || is_search() || is_page_template('templates/portfolio.php')): ?>
                     <header class="page-header">
                         <?php
@@ -227,6 +227,7 @@ if (!function_exists('jobscout_content_start')):
                     <?php } else if (is_page('about-us') || is_page('contact')) { ?>
                             <div class="container-fluid">
                         <?php } else { ?>
+                            <div class="nenblog"><h1>PDS NEWS</h1></div>
                                 <div class="container">
                             <?php } ?>
                             <?php
@@ -560,7 +561,7 @@ if (!function_exists('jobscout_footer_top')):
      */
     function jobscout_footer_top()
     {
-        $footer_sidebars = array('footer-one', 'footer-two', 'footer-three', 'footer-four');
+        $footer_sidebars = array('footer-one');
         $active_sidebars = array();
         $sidebar_count = 0;
 
