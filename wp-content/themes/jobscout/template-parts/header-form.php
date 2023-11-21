@@ -28,7 +28,7 @@ if ($post_slug) {
   <form class="jobscout_job_filters" method="GET" action="<?php echo esc_url($action_page) ?>">
     <div class="search_jobs row" style="margin-left:10px">
 
-      <div class="search_keywords col-md-7 d-flex">
+      <div class="search_keywords col-md-7 d-flex" style="margin-right: 20px;">
 
         <i class="fa fa-search" style="padding-top: 20px;
     padding-bottom: 16px;

@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 /**
  * Client Section
  * 
@@ -10,6 +10,6 @@ if( is_active_sidebar( 'client' ) ){ ?>
 		<div class="container">
 	    	<?php dynamic_sidebar( 'client' ); ?>
 		</div>
-	</section> <!-- .bg-cta-section -->
+	</section> .bg-cta-section -->
 <?php
 }

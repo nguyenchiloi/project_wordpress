@@ -619,7 +619,7 @@ img {
   height: auto;
   /* Make sure images are scaled correctly. */
   max-width: 100%;
-    /* Adhere to container width. */
+  /* Adhere to container width. */
   vertical-align: top;
 }
 
@@ -1323,7 +1323,10 @@ form.search-form input.search-submit:focus {
 .site-footer .widget ul li,
 .site-footer .widget ul li a,
 .site-footer .widget ol li a {
-  color: rgba(255, 255, 255, 0.8);
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
 }
 
 .site-footer .widget ul li {
@@ -1854,7 +1857,7 @@ SIDEBARS
 
 .rightsidebar #primary {
   float: left;
-  width: 75%;
+  width: 100%;
   padding-right: 40px;
 }
 
@@ -2371,10 +2374,12 @@ SITE BANNER SECTION
   /* flex: 1; */
   padding-left: 0;
 }
-.search_location{
-  margin-left: 20px;
+
+.search_location {
+  /* margin-left: 20px; */
   width: 20%;
 }
+
 .banner-caption .jobscout_job_filters .search_jobs div.filter_wide,
 .banner-caption .jobscout_job_filters .search_jobs div.search_categories {
   width: auto;
@@ -3066,7 +3071,8 @@ section.client-section {
 SITE FOOTER SECTION
 ==========================*/
 .footer-t {
-  background: #000;
+  border-top: 1px solid gray;
+  background: #f5f5f7;
   padding-top: 60px;
 }
 
@@ -8160,65 +8166,75 @@ RESPONSIVE STYLESHEET
 .wp-block-social-links {
   flex-wrap: wrap !important;
 }
+
 /*style cua duy*/
-#blog-section{
+#blog-section {
   background-color: #f5f5f7;
   text-align: center;
   padding: 70px 0;
 }
+
 /* .blog{
   margin:0 auto;
   max-width: 1170px;
   justify-content: space-evenly;
   display: flex;
 }  */
-.bog-section .row .postlist .post_listing{
+.bog-section .row .postlist .post_listing {
   display: flex;
-    flex: 1;
-    flex-wrap: wrap;
+  flex: 1;
+  flex-wrap: wrap;
 }
-.readM{
+
+.readM {
   text-decoration: none;
-  background:none;
+  background: none;
   color: orange;
   border: none;
   padding: 0px;
   font-size: 15px;
 }
-#md3{
-    background: #fff;
-    margin-right: 2.5%;
-    margin-bottom: 3%;
-    padding: 30px;
-    position: relative;
-    display: flex;
-    align-items: flex-start;
-    overflow: hidden;
+
+#md3 {
+  background: #fff;
+  margin-right: 2.5%;
+  margin-bottom: 3%;
+  padding: 30px;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  overflow: hidden;
 
 }
-#entryhdmd3{
-    padding-left: 20px;
-    font-size: 40px;
+
+#entryhdmd3 {
+  padding-left: 20px;
+  font-size: 40px;
 }
-#content{
+
+#content {
   text-align: left;
 }
-.md33{
+
+.md33 {
   display: flex !important;
   flex: 2;
   flex-grow: 2;
   flex-wrap: wrap;
-  width:1170px
+  width: 1170px
 }
-.ptnb{
-  margin:initial;
+
+.ptnb {
+  margin: initial;
 }
+
 /*style cua Loi nha*/
-.location-search a{
+.location-search a {
   text-decoration: none;
   color: gray;
 }
-.chinhcss1{
+
+.chinhcss1 {
   font-size: 0.410rem;
   text-transform: uppercase;
   font-weight: bold;
@@ -8233,101 +8249,123 @@ RESPONSIVE STYLESHEET
   text-align: center;
   align-items: center;
 }
-.ngaythangnam-search{
+
+.ngaythangnam-search {
   margin: 0 !important;
   color: gray;
 }
-.chinhcss1 a{
+
+.chinhcss1 a {
   text-decoration: none !important;
   color: gray;
 }
-.noidungngan-search{
+
+.noidungngan-search {
   margin-left: 0 !important;
   margin-top: 10px;
   text-align: justify;
 }
-.noidung-khung-search{
+
+.noidung-khung-search {
   width: 33.3%;
 }
-.chinhlai1 a{
+
+.chinhlai1 a {
   text-decoration: none;
 }
-.chinhlai-search{
+
+.chinhlai-search {
   margin-top: 30px !important;
 }
-.text-holder-homend{
+
+.text-holder-homend {
   margin: 20px 0;
 }
-.text-holder-homend1{
+
+.text-holder-homend1 {
   margin-bottom: 20px;
 }
-.back-ground-photo{
+
+.back-ground-photo {
   background-image: url(./images/banner-image.jpg);
 }
+
 /* ----------------------------- */
-.home .jobs-style{
+.home .jobs-style {
   border: none !important;
   border-radius: 3px !important;
 }
 
-.home .title-job{
+.home .title-job {
   text-transform: uppercase !important;
   text-decoration: none;
 }
-.home .location-job a{
+
+.home .location-job a {
   color: gray !important;
   text-decoration: none !important;
 }
-.load-more{
+
+.load-more {
   color: orange !important;
   background: white !important;
   border: 1px solid orange !important;
 }
-.load-more:hover{
+
+.load-more:hover {
   color: white !important;
   background-color: orange !important;
 }
-.load-more{
+
+.load-more {
   padding: 12px 45px 12px 45px !important;
   text-decoration: none !important;
   border-radius: 0 !important;
   background: #f5f5f7 !important;
 }
-.main-navigation ul li a{
+
+.main-navigation ul li a {
   text-decoration: none !important;
 }
-.main-navigation ul li a:hover{
+
+.main-navigation ul li a:hover {
   text-decoration: none !important;
   color: orange !important;
   border-bottom: 3px solid orange;
 }
-.main-navigation ul li.current-menu-item>a, .main-navigation ul li.current_page_item>a{
+
+.main-navigation ul li.current-menu-item>a,
+.main-navigation ul li.current_page_item>a {
   color: orange !important;
   border-bottom: 3px solid orange;
 }
-.btn-job{
+
+.btn-job {
   background: orange !important;
   border: none !important;
   border-radius: 0 !important;
 }
-.btn-job:hover{
+
+.btn-job:hover {
   background: white !important;
   border: 1px solid orange !important;
   border-radius: 0 !important;
   color: orange !important;
 }
-.chinhlai-search article{
+
+.chinhlai-search article {
   width: 100% !important;
 }
+
 /* css cua phuc */
 .module-5 {
   height: 370px;
-  
+
 }
 
 .img-blog {
   padding: 10px;
-  height: 300px !important;
+  height: 225px !important;
 }
 
 .data-blog {
@@ -8337,6 +8375,7 @@ RESPONSIVE STYLESHEET
 .title-blog {
   font-size: 1em;
 }
+
 /* ----------- */
 .main {
   padding: 0 !important;
@@ -8347,22 +8386,26 @@ RESPONSIVE STYLESHEET
   padding: 0 435px;
   background-size: cover;
 }
-@media only screen and (max-width: 600px){
+
+@media only screen and (max-width: 600px) {
   .main .header {
     background-image: url(https://s3.ap-southeast-1.amazonaws.com/we-xpats.com/articles/images/AdobeStock_183188295.jpeg);
     padding: 0 !important;
     background-size: cover;
   }
+
   .image-japan {
     width: 80%;
     height: 100%;
     text-align: center !important;
     margin-left: 0 !important;
   }
+
   .paragarh {
     padding: 0 !important;
   }
-  .content{
+
+  .content {
     text-align: center !important;
   }
 }
@@ -8393,4 +8436,55 @@ RESPONSIVE STYLESHEET
 
 .paragarh {
   padding: 0 150px;
+}
+
+.widget .menu {
+  display: inline-flex;
+
+}
+
+.menu-primary-container {
+  text-align: center;
+}
+
+.widget ul li {
+  padding: 0 40px;
+}
+
+.widget_text {
+  margin-bottom: 0 !important;
+}
+
+
+#raratheme_client_logo_widget-2.widget.widget_raratheme_client_logo_widget {
+  text-align: center;
+}
+
+.widget_raratheme_client_logo_widget .image-holder:not(.black-wihte) a {
+  opacity: 1 !important;
+}
+
+.widget_raratheme_client_logo_widget .raratheme-client-logo-inner-holder {
+  text-align: center;
+  display: inline-flex;
+}
+
+.site-footer .widget_raratheme_client_logo_widget .image-holder {
+  width: 40px;
+  margin-right: 21px;
+}
+
+.nenblog {
+  background-image: url(./images/banner-img3.jpg);
+  text-align: center;
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  background-size: cover;
+}
+
+.nenblog h1 {
+  padding-top: 10%;
+  color: white;
 }
