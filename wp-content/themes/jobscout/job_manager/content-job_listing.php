@@ -52,34 +52,44 @@ $format_date = date("M d, Y", strtotime($date_arr[0]));
 
 				<div class="job-title-wrap">
 
-				<h2 class="entry-title">
-					<a class="title-job" href="<?php the_job_permalink(); ?>">
-						<?php echo wpjm_the_job_title() ?>
-					</a>
-				</h2>
+					<h2 class="entry-title">
+						<a class="title-job" href="<?php the_job_permalink(); ?>">
+							<?php echo wpjm_the_job_title() ?>
+						</a>
+					</h2>
 
 					<?php if ($company_name) { ?>
 						<div class="company-name">
 							<?php echo "Created: " . $format_date //the_company_name(); ?>
 						</div>
 					<?php } ?>
-					<?php
-					if (get_option('job_manager_enable_types')) {
-						$types = wpjm_get_the_job_types();
-						if (!empty($types)):
-							foreach ($types as $jobtype): ?>
-								<li class="jobs-style job-type <?php echo esc_attr(sanitize_title($jobtype->slug)); ?>">
-									<?php echo esc_html($jobtype->name) . " |" ?>
-									<?php the_company_name() ?> |
-									<span class="location-job">
-										<?php the_job_location(true); ?>
-									</span>
+					<div class="tongkhung1">
+						<?php
+						if (get_option('job_manager_enable_types')) {
+							$types = wpjm_get_the_job_types();
+							if (!empty($types)):
+								foreach ($types as $jobtype): ?>
+									<div class="chinhcss1">
+										<div class="noidung-khung-search">
+											<?php echo esc_html($jobtype->name); ?>
+										</div>
+										<span class="keduong2ben">|</span>
+										<div class="noidung-khung-search">
+											<?php the_company_name(); ?>
+										</div>
+										<span class="keduong2ben">|</span>
+										<div class="noidung-khung-search">
+											<?php the_job_location(true); ?>
+										</div>
+									</div>
 
-								</li>
-							<?php endforeach; endif;
-					}
-					do_action('job_listing_meta_end');
-					?>
+								<?php endforeach; endif;
+						}
+						do_action('job_listing_meta_end');
+						?>
+
+					</div>
+
 				</div>
 
 				<?php if ($job_featured) { ?>
