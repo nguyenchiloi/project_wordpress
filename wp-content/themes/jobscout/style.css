@@ -5582,6 +5582,7 @@ JOB LISTING PAGE
 .site-main .entry-content div.job_listings div.job_listings article .job-title-wrap {
   width: calc(100% - 100px);
   padding-left: 20px;
+  padding-top: 7px;
 }
 
 .site-main .entry-content div.job_listings div.job_listings article .entry-title {
@@ -5589,7 +5590,7 @@ JOB LISTING PAGE
   margin-bottom: 0;
   font-size: 1.1112em;
   line-height: 1.45em;
-  height: 45px;
+  height: 30px;
 }
 
 .site-main .entry-content div.job_listings div.job_listings article .company-name {
@@ -8269,7 +8270,6 @@ RESPONSIVE STYLESHEET
 .noidung-khung-search {
   width: 33.3%;
 }
-
 .chinhlai1 a {
   text-decoration: none;
 }
@@ -8383,7 +8383,7 @@ RESPONSIVE STYLESHEET
 
 .main .header {
   background-image: url(https://s3.ap-southeast-1.amazonaws.com/we-xpats.com/articles/images/AdobeStock_183188295.jpeg);
-  padding: 0 435px;
+  padding: 0 700px;
   background-size: cover;
 }
 
@@ -8480,7 +8480,6 @@ RESPONSIVE STYLESHEET
   height: 400px;
   background-position: center;
   background-repeat: no-repeat;
-
   background-size: cover;
 }
 
